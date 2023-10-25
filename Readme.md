@@ -15,9 +15,8 @@ kubectl edit svc argocd-server -n argocd
 
 
 
-**
 Jenkins Execute shell
----------------------**
+---------------------
 
 git clone https://github.com/Iam-7hills/gitops-demo.git devopsconfig
 
