@@ -1,5 +1,5 @@
-**ArgoCD installation
-------------------**
+ArgoCD installation
+------------------
 
 kubectl create ns argocd
 
