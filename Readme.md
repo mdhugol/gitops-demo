@@ -15,10 +15,10 @@ kubectl edit svc argocd-server -n argocd
 
 
 
-Jenkins Execute shell
+Jenkins Execute shell I
 ---------------------
 
-git clone https://github.com/Iam-7hills/gitops-demo.git devopsconfig
+git clone https://github.com/mdhugol/gitops-demo.git devopsconfig
 
 cd devopsconfig/helm
 
@@ -33,15 +33,17 @@ cp -f gittemplate.yaml ../gitops.yaml
 sed -i "s/$BUILD_NUMBER/{tagversion}/g" gittemplate.yaml
 
 
+Jenkins Execute shell II
+---------------------
 cd ${WORKSPACE}/devopsconfig
 
-git config user.email "iam.7hills@gmail.com"
+git config user.email "mdhugol@gmail.com"
 
-git config user.name "Iam-7hills"
+git config user.name "mdhugol"
 
 git add .
 
 git commit -m "Modofied the template file and pushed to gitops-demo.git for build $BUILD_NUMBER"
 
-git push https://<token>@github.com/Iam-7hills/gitops-demo.git
+git push https://{username}:{token}@github.com/mdhugol/gitops-demo.git
 
