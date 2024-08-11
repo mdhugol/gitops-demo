@@ -30,6 +30,8 @@ sed -i "s/{tagversion}/$BUILD_NUMBER/g" gittemplate.yaml
 
 cp -f gittemplate.yaml ../gitops.yaml
 
+sed -i "s/$BUILD_NUMBER/{tagversion}/g" gittemplate.yaml
+
 
 cd ${WORKSPACE}/devopsconfig
 
@@ -39,7 +41,7 @@ git config user.name "Iam-7hills"
 
 git add .
 
-git commit -m "Modofied the template file and pushed to gitops-demo.git"
+git commit -m "Modofied the template file and pushed to gitops-demo.git for build $BUILD_NUMBER"
 
 git push https://<token>@github.com/Iam-7hills/gitops-demo.git
 
