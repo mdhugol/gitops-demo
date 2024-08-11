@@ -33,9 +33,12 @@ cp -f gittemplate.yaml ../gitops.yaml
 sed -i "s/$BUILD_NUMBER/{tagversion}/g" gittemplate.yaml
 
 
+
 Jenkins Execute shell II
 ---------------------
 cd ${WORKSPACE}/devopsconfig
+
+ls -lrt
 
 git config user.email "mdhugol@gmail.com"
 
